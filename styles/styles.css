@@ -1,0 +1,17 @@
+pre {
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0;
+}
+
+
+.allSnips {
+    display: flex;
+    justify-content: 
+}
+
+.snippetList {
+    /* float: right; */
+    width: 50%;
+}
