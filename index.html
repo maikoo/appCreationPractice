@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="styles/solarized-light.css">
 	<link rel="stylesheet" href="styles/styles.css">
 	<script src="lib/highlight.pack.js"></script>
-	<!-- <script>hljs.initHighlightingOnLoad();</script> -->
+	<script>hljs.initHighlightingOnLoad();</script>
 	<script src="app.js"></script>
 
 	<title>my App</title>
@@ -25,11 +25,11 @@
 	<section class="container">
 
 		<section class="inputFields">
-			
 			<div>
 				<div>
 					<button class="btn getAllData">Show All Snippets</button>
 				</div>
+				<br>
 				<div>Find Snippet</div>
 				<input class="filter" type="text" name="filterInput" id="">
 			</div>
@@ -40,19 +40,20 @@
 					<fieldset class="field">
 						<div>
 							<div>Snippet name</div>
-							<input class="shortName" type="text" name="firstInput" placeholder="Insert name here">
+							<input class="shortName" type="text" name="firstInput" placeholder="Insert name here" autofocus="true">
 						</div>
 
 						<br>
 						
 						<legend>Insert Snippet</legend>
 						<textarea class="textArea" name="codeField" id="" cols="50" rows="5" onkeyup="autoGrow(this);" placeholder="Insert code"></textarea>
+						<!-- <div contenteditable></div> -->
 						<button class="btn setData">Click to Save</button>
 					</fieldset>
 				</form>
 			</div>
-
-		</section>
+		</section> 
+		<!-- end of inputfields -->
 
 		<section class="allSnips">
 			<div>

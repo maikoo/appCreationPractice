@@ -6,7 +6,7 @@ pre {
 }
 
 .btn {
-    width: 100px
+    width: auto;
 }
 
 .container {
@@ -16,30 +16,48 @@ pre {
     flex-flow: row wrap;
     align-content: right; */
     /* width:50% */
+    /* flex-shrink: 0; */
+    align-items: left;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-content: left;
 }
 .inputFields {
     display: flex;
-    align-items: left;
-    justify-content: left;
+    flex-grow: 1;
     flex-flow: column wrap;
-    align-content: left;
-    width:30%
+    flex-shrink: 0;
+    flex-basis: auto;
+    min-width: 400px;
+    /* align-items: left;
+    justify-content: left;
+    align-content: left;*/
 }
 
 .allSnips {
     display: flex;
-    align-items: right;
-    justify-content: right;
+    flex-grow: 2;
+    flex-shrink: 0;
+    flex-basis: auto;
+    /* justify-content: right; */
+    /* align-items: right;
     flex-flow: column wrap;
-    align-content: right;
-    width:60%
+    align-content: right; */
 }
+
+ .snippetList {
+    min-width: 700px;
+} 
 
 .field {
     width: 200px;
 }
 
-/* .snippetList {
-    display: flex;
-    flex-flow: column wrap;
-} */
+textarea,
+pre {
+    -moz-tab-size : 2;
+      -o-tab-size : 2;
+         tab-size : 2;
+}
+
+
