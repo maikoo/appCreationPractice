@@ -10,3 +10,6 @@ Goals:
 - [x] Two fields for label and snippet
 - [x] Display all functionality
 - [x] Search by name
+- [ ] Add styling 
+- [ ] Refactor code
+- [ ] Add divs that can scroll or be hidden on click, make webpage appear more complete

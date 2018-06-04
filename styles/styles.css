@@ -5,13 +5,41 @@ pre {
     margin: 1em 0;
 }
 
+.btn {
+    width: 100px
+}
+
+.container {
+     display: flex;
+    /* align-items: right;
+    justify-content: right;
+    flex-flow: row wrap;
+    align-content: right; */
+    /* width:50% */
+}
+.inputFields {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-flow: column wrap;
+    align-content: left;
+    width:30%
+}
 
 .allSnips {
     display: flex;
-    justify-content: 
+    align-items: right;
+    justify-content: right;
+    flex-flow: column wrap;
+    align-content: right;
+    width:60%
 }
 
-.snippetList {
-    /* float: right; */
-    width: 50%;
+.field {
+    width: 200px;
 }
+
+/* .snippetList {
+    display: flex;
+    flex-flow: column wrap;
+} */
