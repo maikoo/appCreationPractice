@@ -12,26 +12,22 @@ $(document).ready(function () {
 
 	$('.getAllData').on('click', function () {
 		$('.snippetList').html('')
-		let local = localStorage.getItem()
+		// let local = localStorage.getItem()
 		for (let key in localStorage) {
-		// 	if (typeof localStorage[key] === 'string') {
-		// 		// let textCode = $('.snippetList').val().replace(/\n/g, '<br>').replace(/ /g, '&nbsp');
+			if (typeof localStorage[key] === 'string') {
+				let htmlEnabled = `${(localStorage[key].replace(/</g, '&lt;'))}`
 
-		// 		let htmlEnabled = `${(localStorage[key].replace(/</g, '&lt;'))}`
-		// 			// .replace(/</g, '&lt;')
-		// 		// console.log((htmlEnabled))
-		// 		$(`<div class="snip ${key}">
-		// 		<h3>${key}</h3>
-		// 		<pre><code>${htmlEnabled}</code></pre>
-		// 		</div>`).appendTo('.snippetList')
+				$(`<div class="snip ${key}">
+		 		<h3>${key}</h3>
+		 		<pre><code>${htmlEnabled}</code></pre>
+		 		</div>`).prependTo('.snippetList')
 
-
-
-		// 		$('.snip').each(function (i, block) {
-		// 			hljs.highlightBlock(block);
-		// 		});
-		// 	}
+				$('.snip').each(function (i, block) {
+					hljs.highlightBlock(block);
+				});
+			}
 		}
+
 	})
 
 	$('.filter').on('keypress', function () {

@@ -13,3 +13,6 @@ Goals:
 - [ ] Add styling 
 - [ ] Refactor code
 - [ ] Add divs that can scroll or be hidden on click, make webpage appear more complete
+- [ ] Add hover cursor change
+- [ ] make title the home button
+
