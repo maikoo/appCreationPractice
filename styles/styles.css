@@ -5,6 +5,9 @@ pre {
     margin: 1em 0;
 }
 
+body {
+    background-color: #fdf6e3
+}
 .btn {
     width: auto;
 }
@@ -49,6 +52,17 @@ pre {
     min-width: 700px;
 } 
 
+.snip {
+    /* padding: 2px; */
+}
+
+.snip:hover {
+    border-style: solid;
+    border-width: 1px; 
+    border-color: #20538D;
+}
+
+
 .field {
     width: 200px;
 }
@@ -62,6 +76,7 @@ pre {
 
 
 .btn {
+    font-size: 14px;
 	padding: 10px 15px;
 	background: rgb(50, 146, 117);
 	color: #FFF;
@@ -94,3 +109,37 @@ pre {
 	background: rgb(27, 75, 56);
 	border: solid 1px #203E5F;
 }
+
+.legend {
+
+}
+
+.field {
+    font-family: sans-serif;
+    border: 5px solid #268bd2;
+    background: #fdf6e3;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.field legend {
+    /* background: rgb(115, 22, 168); */
+    background:#268bd2;
+    color: #fff;
+    padding: 5px 10px ;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 5px #fdf6e3;
+    /* margin-left: px; */
+    /* color: #fdf6e3 */
+}
+/* 
+@font-face {
+    font-family: 'Womby';
+    src:url(C:\Users\mikey\Desktop\HREXT\appCreationPractice\styles\fonts\womby\Womby.ttf) format('truetype');
+}
+
+.wFont {
+    font-family: 'Womby', Fallback, sans-serif;
+} */
+
