@@ -13,7 +13,7 @@ $(document).ready(function () {
 	$('.getAllData').on('click', function () {
 		$('.snippetList').html('')
 		let local = localStorage.getItem()
-		// for (let key in localStorage) {
+		for (let key in localStorage) {
 		// 	if (typeof localStorage[key] === 'string') {
 		// 		// let textCode = $('.snippetList').val().replace(/\n/g, '<br>').replace(/ /g, '&nbsp');
 
@@ -31,7 +31,7 @@ $(document).ready(function () {
 		// 			hljs.highlightBlock(block);
 		// 		});
 		// 	}
-		// }
+		}
 	})
 
 	$('.filter').on('keypress', function () {
