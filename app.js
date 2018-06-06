@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+	$('.container').scroll(function () {
+		$('#fixed').css('top', $(this).scrollTop());
+	});
+
 	$('.setData').on('click', function () {
 		let shortName = $('.shortName').val()
 		let textAreaVal = $('.textArea').val()

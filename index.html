@@ -12,11 +12,10 @@
 	<script>hljs.initHighlightingOnLoad();</script>
 	<script src="app.js"></script>
 
-	<title>my App</title>
-
+	<title>Snippet Saver</title>
 	<head>
 		<header>
-			<h1 class="wFont">Snippet Finder</h1>
+			<h1 class="wFont getAllData">Snippet Finder</h1>
 		</header>
 	</head>
 </head>
@@ -24,19 +23,24 @@
 <body>
 	<section class="container">
 
-		<section class="inputFields">
-			<div>
+		<section class="inputFields Fixed" id="fixed">
+			<div >
 				<div>
 					<button class="btn getAllData">Show All</button>
 				</div>
 				<br>
-				<div>Find Snippet</div>
-				<input class="filter" type="text" name="filterInput" id="">
+				<fieldset class="field">
+					<legend class="legend">Find Snippet</legend>
+					<div>
+						<input class="filter" type="text" name="filterInput" id="">
+					</div>
+
+				</fieldset>
 			</div>
 
 			<br>
 			<div>
-				<form action="">
+				<form class="form" action="">
 					<fieldset class="field">
 						<div>
 							<!-- <div>Name</div> -->
@@ -56,9 +60,7 @@
 		<!-- end of inputfields -->
 
 		<section class="allSnips">
-			<div>
 				<div class="snippetList"></div>
-			</div>
 		</section>
 
 	</section>
