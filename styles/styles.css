@@ -8,14 +8,11 @@ pre {
 h3 {
     font-size: 22px;
 }
-body {
+!body {
     background-color: #fdf6e3
 }
-.btn {
-    width: 140px;
-}
 
-.container {
+.flexbox {
      display: flex;
     /* align-items: right;
     justify-content: right;
@@ -27,12 +24,13 @@ body {
     justify-content: flex-start;
     flex-flow: row wrap;
     align-content: left;
+    
 }
 .inputFields {
     display: flex;
     /* flex-grow: 1; */
     flex-flow: column wrap;
-    flex-shrink: 0;
+    flex-shrink: 1;
     flex-basis: auto;
     min-width: 400px;
     /* align-items: left;
@@ -40,9 +38,40 @@ body {
     align-content: left; */
     margin-right: 40px; 
 }
-.field {
 
+.field {
 }
+
+.field {
+    width: 450px;
+    font-family: sans-serif;
+    border: 4px solid #268bd2;
+    background: #fdf6e3;
+    border-radius: 3px;
+    padding: 15px;
+}
+
+.field legend {
+    /* background: rgb(115, 22, 168); */
+    background:#268bd2;
+    color: #fff;
+    padding: 5px 10px ;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 5px #fdf6e3;
+    /* margin-left: px; */
+    /* color: #fdf6e3 */
+}
+
+textarea,
+pre {
+    -moz-tab-size : 2;
+    -o-tab-size : 2;
+    tab-size : 2;
+}
+
+/* snippets */
+/* snippets */
 .allSnips {
     display: flex;
     /* position: relative; */
@@ -54,7 +83,7 @@ body {
 }
 
  .snippetList {
-    margin-left: 15px;
+    margin-left: 480px;
     min-width: 700px;
 } 
 
@@ -68,20 +97,10 @@ body {
     border-color: #20538D;
 }
 
-
-.field {
-    width: 200px;
-}
-
-textarea,
-pre {
-    -moz-tab-size : 2;
-      -o-tab-size : 2;
-         tab-size : 2;
-}
-
-
+/* buttons */
+/* buttons */
 .btn {
+    width: 140px;
     font-size: 14px;
 	padding: 10px 15px;
 	background: rgb(50, 146, 117);
@@ -121,25 +140,7 @@ pre {
 
 } */
 
-.field {
-    font-family: sans-serif;
-    border: 4px solid #268bd2;
-    background: #fdf6e3;
-    border-radius: 3px;
-    padding: 15px;
-}
 
-.field legend {
-    /* background: rgb(115, 22, 168); */
-    background:#268bd2;
-    color: #fff;
-    padding: 5px 10px ;
-    font-size: 18px;
-    border-radius: 5px;
-    box-shadow: 0 0 0 5px #fdf6e3;
-    /* margin-left: px; */
-    /* color: #fdf6e3 */
-}
 /* 
 @font-face {
     font-family: 'Womby';
@@ -150,8 +151,111 @@ pre {
     font-family: 'Womby', Fallback, sans-serif;
 } */
 
-/* .Fixed {
+.Fixed {
     position: fixed;
     top: 100px;
-} */
+    /* background-color: #fdf6e3 */
+    
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+}
+.topnav .title{
+    float: left;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+/**
+*Mainmenu-area
+**/
+
+.mainmenu-area {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999999;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.overlay,
+.overlay a,
+.mainmenu-area a {
+    color: #ffffff;
+}
+
+.mainmenu-area .logo {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    height: inherit;
+    margin-top: 8px;
+    padding-left: 0;
+}
+
+.mainmenu-area .logo h2 {
+    margin-bottom: 0;
+}
+
+.mainmenu-area #primary-menu > ul > li > a {
+    background: none;
+    padding: 30px 15px;
+    position: relative;
+    border-top: 3px solid transparent;
+    text-align: center;
+}
+
+.mainmenu-area #primary-menu > ul > li > a:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: -10px;
+    width: 0;
+    height: 0;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-top: 10px solid #ffffff;
+    opacity: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.mainmenu-area #primary-menu > ul > li > a:hover:before,
+.mainmenu-area #primary-menu > ul > li.active > a:before {
+    opacity: 1;
+    top: 0;
+}
+
+.mainmenu-area #primary-menu ul li.active a,
+.mainmenu-area #primary-menu ul li a:hover {
+    border-top: 3px solid #ffffff;
+}
+
+.mainmenu-area.affix {
+    background-color: #138fc2;
+}
 

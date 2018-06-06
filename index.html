@@ -5,24 +5,26 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-	<link rel="stylesheet" href="styles/solarized-light.css">
-	<link rel="stylesheet" href="styles/styles.css">
-	<script src="lib/highlight.pack.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
-	<script src="app.js"></script>
+	
 
 	<title>Snippet Saver</title>
 	<head>
 		<header>
-			<h1 class="wFont getAllData">Snippet Finder</h1>
+			<!-- <h1 class="wFont getAllData">Snippet Finder</h1> -->
+			<div class="topnav">
+				<a href="title" class="title">Snippet Finder</a>				
+				<a href="#about">About</a>
+				<a href="#news">News</a>
+				<a href="#contact">Contact</a>
+				<a class="active" href="#home">Home</a>
 		</header>
+		</div>
 	</head>
 </head>
 
 <body>
-	<section class="container">
-
+	<section class="container-fluid">
+		<!-- input text area -->
 		<section class="inputFields Fixed" id="fixed">
 			<div >
 				<div>
@@ -43,31 +45,37 @@
 				<form class="form" action="">
 					<fieldset class="field">
 						<div>
-							<!-- <div>Name</div> -->
 							<input class="shortName" type="text" name="firstInput" placeholder="Insert name" autofocus="true">
 						</div>
-
 						<br>
-						
 						<legend class="legend">Insert Snippet</legend>
 						<textarea class="textArea" name="codeField" id="" cols="50" rows="5" onkeyup="autoGrow(this);" placeholder="Insert code"></textarea>
-						<!-- <div contenteditable></div> -->
 						<button class="btn setData">Save</button>
 					</fieldset>
 				</form>
 			</div>
 		</section> 
 		<!-- end of inputfields -->
+		<div class="container-fluid">
+			<section class="allSnips">
+					<div class="snippetList"></div>
+			</section>
 
-		<section class="allSnips">
-				<div class="snippetList"></div>
-		</section>
+		</div>
 
 	</section>
-<!-- <script>	</script> -->
+	
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<link rel="stylesheet" href="styles/solarized-light.css">
+<link rel="stylesheet" href="styles/styles.css">
+<script src="lib/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+ crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+ crossorigin="anonymous"></script>
+<script src="app.js"></script>
 </body>
 
 </html>
 
-
-<!-- &lt;Filter by name&gt; -->
