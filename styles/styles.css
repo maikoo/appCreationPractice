@@ -14,18 +14,15 @@ body {
 
 .flexbox {
      display: flex;
-    /* align-items: right;
-    justify-content: right;
-    flex-flow: row wrap;
-    align-content: right; */
-    /* width:50% */
-    /* flex-shrink: 0; */
     align-items: left;
     justify-content: flex-start;
     flex-flow: row wrap;
     align-content: left;
     
 }
+
+/* input fields */
+/* input fields */
 .inputFields {
     display: flex;
     /* flex-grow: 1; */
@@ -64,6 +61,12 @@ pre {
     -o-tab-size : 2;
     tab-size : 2;
 }
+
+.Fixed {
+    position: fixed;
+    top: 300px;
+}
+
 
 /* snippets */
 /* snippets */
@@ -142,9 +145,5 @@ pre {
     font-family: 'Womby', Fallback, sans-serif;
 } */
 
-.Fixed {
-    position: fixed;
-    top: 300px;
-}
 
 
