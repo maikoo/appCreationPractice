@@ -1,8 +1,8 @@
 $(document).ready(function () {
 
-	$('.container').scroll(function () {
-		$('#fixed').css('top', $(this).scrollTop());
-	});
+	// $('.container').scroll(function () {
+	// 	$('#fixed').css('top', $(this).scrollTop());
+	// });
 
 	$('.setData').on('click', function () {
 		let shortName = $('.shortName').val()
@@ -17,22 +17,25 @@ $(document).ready(function () {
 	$('.getAllData').on('click', function () {
 		$('.snippetList').html('')
 		// let local = localStorage.getItem()
-		for (let key in localStorage) {
-			if (typeof localStorage[key] === 'string') {
-				let htmlEnabled = `${(localStorage[key].replace(/</g, '&lt;'))}`
+			let getData = () => {
+				for (let key in localStorage) {
+				if (typeof localStorage[key] === 'string') {
+					let htmlEnabled = `${(localStorage[key].replace(/</g, '&lt;'))}`
 
-				$(`<div class="snip ${key}">
-		 		<h3>${key}</h3>
-		 		<pre><code>${htmlEnabled}</code></pre>
-		 		</div>`).prependTo('.snippetList')
+					$(`<div class="snip ${key}">
+						<h3>${key}</h3>
+						<pre><code>${htmlEnabled}</code></pre>
+						</div>`).hide().prependTo('.snippetList').fadeIn("slow");
 
-				$('.snip').each(function (i, block) {
-					hljs.highlightBlock(block);
-				});
+					$('.snip').each(function (i, block) {
+						hljs.highlightBlock(block);
+					});
+				}
 			}
 		}
-
+		getData()
 	})
+
 
 	$('.filter').on('keypress', function () {
 		let filter = $('.filter').val()
@@ -40,27 +43,12 @@ $(document).ready(function () {
 		let codeSnippet =	`<div class="snip ${filter}"><h3>${filter}</h3>
 				<pre><code>${retrieve}</code></pre></div>`
 				$('.snippetList').html('')
-				$(codeSnippet).appendTo('.snippetList')
+				$(codeSnippet).hide().appendTo('.snippetList').fadeIn("slow")
 
 				$('.snip').each(function (i, block) {
 					hljs.highlightBlock(block);
 				});
-		// for (let key in localStorage) {
-		// 	if (filter === key) {
-		// 		let htmlSnippet = localStorage[key].replace(/</g, '&lt;')
-		// 		let codeSnippet = 
-		// 		`<div class="snip ${key}">
-		// 			<h3>${key}</h3>
-		// 		<pre><code>${htmlSnippet}</code></pre>
-		// 		</div>`
-		// 		$('.snippetList').html('')
-		// 		$(codeSnippet).appendTo('.snippetList')
 
-		// 		$('.snip').each(function (i, block) {
-		// 			hljs.highlightBlock(block);
-		// 		});
-		// 	}
-		// }
 	})
 
 })

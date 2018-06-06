@@ -40,10 +40,7 @@ body {
 }
 
 .field {
-}
-
-.field {
-    width: 450px;
+    width: 400px;
     font-family: sans-serif;
     border: 4px solid #268bd2;
     background: #fdf6e3;
@@ -52,15 +49,13 @@ body {
 }
 
 .field legend {
-    /* background: rgb(115, 22, 168); */
-    background:#268bd2;
+    width: 150px;
+    background:#668ba8;
     color: #fff;
     padding: 5px 10px ;
     font-size: 18px;
     border-radius: 5px;
-    box-shadow: 0 0 0 5px rgb(42, 201, 223);
-    /* margin-left: px; */
-    /* color: #fdf6e3 */
+    box-shadow: 0 0 0 2px rgb(25, 125, 138);
 }
 
 textarea,
@@ -93,13 +88,13 @@ pre {
 
 .snip:hover {
     border-style: solid;
-    border-width: 1px; 
+    border-width: 2px; 
     border-color: #20538D;
 }
 
 /* buttons */
 /* buttons */
-.btn {
+/* .btn {
     width: 140px;
     font-size: 14px;
 	padding: 10px 15px;
@@ -120,25 +115,21 @@ pre {
 	-moz-user-select:none;
 	-ms-user-select:none;
 	user-select:none;
-}
+} */
 .btn:hover {
     cursor: pointer;
-	background: rgb(41, 116, 92);
-	/* background: #356094; */
+	background: rgb(175, 206, 193);
 	border: solid 1px #2A4E77;
 	text-decoration: none;
-}
+} 
 .btn:active {
 	-webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
 	-moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
 	box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
 	background: rgb(27, 75, 56);
 	border: solid 1px #203E5F;
-}
+} 
 
-/* .legend {
-
-} */
 
 
 /* 
@@ -153,9 +144,7 @@ pre {
 
 .Fixed {
     position: fixed;
-    top: 100px;
-    /* background-color: #fdf6e3 */
-    
+    top: 300px;
 }
 
 
