@@ -11,18 +11,40 @@
 	<head>
 		<header>
 			<!-- <h1 class="wFont getAllData">Snippet Finder</h1> -->
-			<div class="topnav">
-				<a href="title" class="title">Snippet Finder</a>				
-				<a href="#about">About</a>
-				<a href="#news">News</a>
-				<a href="#contact">Contact</a>
-				<a class="active" href="#home">Home</a>
+
+				<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+					<a class="navbar-brand" href="#">Snippet Finder</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+					 aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav mr-auto">
+							<!-- <li class="nav-item active">
+								<a class="nav-link" href="#">Home
+									<span class="sr-only">(current)</span>
+								</a>
+							</li> -->
+							<nav class="navbar navbar-light bg-dark">
+								<form class="form-inline">
+									<button class="btn btn-outline-success" type="button">Main button</button>
+								</form>
+							</nav>
+						</ul>
+						<form class="form-inline my-2 my-lg-0">
+							<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+							<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+						</form>
+					</div>
+				</nav>
 		</header>
 		</div>
 	</head>
 </head>
 
-<body>
+<body class="body">
+	
 	<section class="container-fluid">
 		<!-- input text area -->
 		<section class="inputFields Fixed" id="fixed">
@@ -64,7 +86,7 @@
 		</div>
 
 	</section>
-	
+
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <link rel="stylesheet" href="styles/solarized-light.css">
 <link rel="stylesheet" href="styles/styles.css">
