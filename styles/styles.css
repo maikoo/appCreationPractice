@@ -5,8 +5,12 @@ pre {
     margin: 1em 0;
     font-size: 16px;
 }
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Gentium Basic', serif !important;
+}
 h3 {
     font-size: 22px;
+    color: rgb(134, 98, 31) !important;
 }
 body {
     background-color: #fdf6e3 !important; 
@@ -133,6 +137,11 @@ pre {
 	border: solid 1px #203E5F;
 } 
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
 
 
 /* 

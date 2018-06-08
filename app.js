@@ -1,18 +1,19 @@
 $(document).ready(function () {
-
+	
 	$('.setData').on('click', function () {
 		let shortName = $('.shortName').val()
 		let textAreaVal = $('.textArea').val()
 		let codeText = `${textAreaVal}`
-
 		localStorage.setItem(`${shortName}`, codeText)
 		$('.textArea').val('')
 		$('.shortName').val('')
+		$('.snippetList').html('')
+		getData(localStorage)
+		highlight("snip")
 	})
 
 	$('.getAllData').on('click', function () {
 		$('.snippetList').html('')
-
 		getData(localStorage)
 		highlight("snip")
 	})
@@ -21,8 +22,7 @@ $(document).ready(function () {
 		let filter = $('.filter').val()
 		let retrieve = localStorage.getItem(`${filter}`).replace(/</g, '&lt;')
 		let codeSnippet =	`<div class="snip ${filter}"><h3>${filter}</h3>
-				<pre><code>${retrieve}</code></pre></div>`
-
+				<pre class="prettyprint"><code>${retrieve}</code></pre></div>`
 		$('.snippetList').html('')
 		$(codeSnippet).hide().appendTo('.snippetList').fadeIn("slow")
 		highlight("snip")
@@ -46,11 +46,13 @@ let getData = (obj) => {
 						<h3>${key}</h3>
 						<pre><code>${htmlEnabled}</code></pre>
 						</div>`).hide()
-				.prependTo('.snippetList')
+				.appendTo('.snippetList')
 				.fadeIn("slow");
 		}
 	}
 }
+getData(localStorage)
+
 //syntax highlighting
 let highlight = (x) => {
 	let input = x;
